@@ -142,195 +142,124 @@
 
 
 
+<section class="collage-section" id="backgroundSection">
+    <h1>Nuestros Servicios</h1>
+    <div class="collage-container">
+        <div class="collage-item">
+            <img src="picture/1card contenedor basura.JPG" alt="Contenedor de basura lleno de escombros">
+            <div class="title-overlay">Gestión de Residuos</div>
+            <div class="info-card">Recolección y disposición eficiente de escombros y residuos de construcción.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/6card obradores.jpg" alt="Obradores en sitio de construcción">
+            <div class="title-overlay">Obradores</div>
+            <div class="info-card">Instalaciones temporales para personal y equipos en obras de construcción.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/5card maquinaria.jpg" alt="Maquinaria pesada en obra">
+            <div class="title-overlay">Maquinaria Pesada</div>
+            <div class="info-card">Equipos especializados para movimiento de tierras y construcción.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/4card aridos.jpg" alt="Áridos para construcción">
+            <div class="title-overlay">Suministro de Áridos</div>
+            <div class="info-card">Provisión de materiales como arena, grava y piedra triturada para proyectos.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/camion de agua.jpg" alt="Camión cisterna de agua">
+            <div class="title-overlay">Servicio de Agua</div>
+            <div class="info-card">Suministro de agua a granel para obras y situaciones especiales.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/contenedores.jpeg" alt="Contenedores industriales">
+            <div class="title-overlay">Alquiler de Contenedores</div>
+            <div class="info-card">Contenedores para almacenamiento y transporte de materiales.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/2card residuos organicos.webp" alt="Residuos orgánicos y compost">
+            <div class="title-overlay">Gestión de Residuos Orgánicos</div>
+            <div class="info-card">Soluciones sostenibles para el manejo y reciclaje de residuos orgánicos.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/3card tratamiento de poda.JPG" alt="Tratamiento de poda">
+            <div class="title-overlay">Tratamiento de Poda</div>
+            <div class="info-card">Servicios de poda y gestión de residuos vegetales.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/camion.jpeg" alt="Camión de carga">
+            <div class="title-overlay">Transporte de Materiales</div>
+            <div class="info-card">Servicios de transporte de materiales de construcción y residuos.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/contenedores.webp" alt="Contenedores de reciclaje">
+            <div class="title-overlay">Reciclaje</div>
+            <div class="info-card">Sistemas de separación y reciclaje de residuos en obra.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/acoplado.jpeg" alt="Acoplado de camión">
+            <div class="title-overlay">Equipos de Transporte</div>
+            <div class="info-card">Acoplados y remolques para transporte de maquinaria y materiales.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/conarsac-blog-movimiento-de-tierras.jpg" alt="Excavadora en movimiento de tierras">
+            <div class="title-overlay">Movimiento de Tierras</div>
+            <div class="info-card">Servicios de excavación y preparación de terrenos para construcción.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/excavadora1.png" alt="Excavadora en obra">
+            <div class="title-overlay">Excavación Especializada</div>
+            <div class="info-card">Trabajos de excavación precisos para proyectos de construcción complejos.</div>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.collage-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                document.querySelectorAll('.collage-item.active').forEach(activeItem => {
+                    if (activeItem !== item) {
+                        activeItem.classList.remove('active');
+                    }
+                });
+                item.classList.add('active');
+            });
+        });
+    
+        document.querySelector('.collage-container').addEventListener('mouseleave', () => {
+            document.querySelectorAll('.collage-item.active').forEach(item => {
+                item.classList.remove('active');
+            });
+        });
+        </script>
+
+
+
+
+</section>
+
+<script>
+document.querySelectorAll('.collage-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        document.querySelectorAll('.collage-item.active').forEach(activeItem => {
+            if (activeItem !== item) {
+                activeItem.classList.remove('active');
+            }
+        });
+        item.classList.add('active');
+    });
+});
+
+document.querySelector('.collage-container').addEventListener('mouseleave', () => {
+    document.querySelectorAll('.collage-item.active').forEach(item => {
+        item.classList.remove('active');
+    });
+});
+</script>
+
 
 
     <!--Aqui comienza nuestros servicios-->
-    <section class="carousel-section" id="backgroundSection">
-      <div class="info-container">
-          <h2 class="section-title">Nuestros servicios</h2>
-          <div class="explanation" id="explanationBox"></div>
-      </div>
-      <div class="carousel-container">
-          <div class="carousel" id="imageCarousel">
-              <!-- Las tarjetas se generarán dinámicamente con JavaScript -->
-          </div>
-      </div>
-      <div class="scroll-indicator">↔</div>
-  </section>
-
-  <script>
-      const backgroundSection = document.getElementById('backgroundSection');
-      const imageCarousel = document.getElementById('imageCarousel');
-      const explanationBox = document.getElementById('explanationBox');
-      let currentIndex = 0;
-      const cardWidth = 153; // 133px width + 20px margin
-
-      const services = [
-          {
-              title: "Contenedores de escombro y basura",
-              image: "picture/contenedores.jpeg",
-              background: "contenedores",
-              explanation: "Ofrecemos contenedores para la recolección eficiente de escombros y basura, ayudando a mantener limpio y organizado su espacio de trabajo o proyecto de construcción."
-          },
-          {
-              title: "Residuos orgánicos",
-              image: "picture/2card residuos organicos.webp",
-              background: "residuos_organicos",
-              explanation: "Gestionamos residuos orgánicos de manera responsable, promoviendo el compostaje y la reducción del impacto ambiental."
-          },
-          {
-              title: "Tratamiento de poda",
-              image: "picture/3card tratamiento de poda.JPG",
-              background: "poda",
-              explanation: "Procesamos los restos de poda para su reutilización como mantillo o compost, contribuyendo a un ciclo sostenible de manejo de residuos verdes."
-          },
-          {
-              title: "Movimiento de suelos",
-              image: "picture/Movimientos de tierra.webp",
-              background: "movimiento_suelos",
-              explanation: "Realizamos movimientos de tierra eficientes y precisos para proyectos de construcción, nivelación de terrenos y preparación de sitios."
-          },
-          {
-              title: "Venta de áridos de cantera",
-              image: "picture/4card aridos.jpg",
-              background: "aridos",
-              explanation: "Suministramos áridos de alta calidad directamente de cantera para proyectos de construcción y paisajismo."
-          },
-          {
-              title: "Alquiler de maquinaria",
-              image: "picture/5card maquinaria.jpg",
-              background: "maquinaria",
-              explanation: "Ofrecemos una amplia gama de maquinaria pesada en alquiler para proyectos de construcción, excavación y manejo de materiales."
-          },
-          {
-              title: "Venta de agua potable",
-              image: "picture/camion de agua.jpg",
-              background: "agua_potable",
-              explanation: "Proporcionamos agua potable de calidad para proyectos de construcción, eventos y situaciones de emergencia."
-          },
-          {
-              title: "Alquiler de contenedores obradores",
-              image: "picture/contenedores.webp",
-              background: "obradores",
-              explanation: "Alquilamos contenedores adaptados como obradores para brindar espacios de trabajo seguros y funcionales en proyectos de construcción."
-          }
-      ];
-
-      function createCard(service) {
-          const card = document.createElement('div');
-          card.className = 'card';
-          card.innerHTML = `
-              <img src="${service.image}" alt="${service.title}" data-bg="${service.background}" data-explanation="${service.explanation}">
-              <div class="card-title">${service.title}</div>
-          `;
-          return card;
-      }
-
-      function populateCarousel() {
-          const screenWidth = window.innerWidth;
-          const totalCardWidth = cardWidth * services.length;
-          const repetitions = Math.ceil(screenWidth / totalCardWidth) + 1;
-
-          for (let i = 0; i < repetitions; i++) {
-              services.forEach(service => {
-                  imageCarousel.appendChild(createCard(service));
-              });
-          }
-      }
-
-      function moveCarousel() {
-          currentIndex++;
-          if (imageCarousel) {
-              imageCarousel.style.transition = 'transform 0.5s ease';
-              imageCarousel.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
-
-              if (currentIndex >= services.length) {
-                  setTimeout(() => {
-                      if (imageCarousel) {
-                          imageCarousel.style.transition = 'none';
-                          currentIndex = 0;
-                          imageCarousel.style.transform = `translateX(0)`;
-                      }
-                  }, 500);
-              }
-          }
-      }
-
-      function updateBackground(index) {
-          const realIndex = index % services.length;
-          const service = services[realIndex];
-          if (backgroundSection && explanationBox) {
-              backgroundSection.setAttribute('data-bg', service.background);
-              explanationBox.innerHTML = `<h3>${service.title}</h3><p>${service.explanation}</p>`;
-              explanationBox.classList.add('show');
-          }
-      }
-
-      function initCarousel() {
-          if (imageCarousel && backgroundSection && explanationBox) {
-              populateCarousel();
-              updateBackground(currentIndex);
-
-              setInterval(moveCarousel, 3000);
-
-              let startX, isDragging = false;
-
-              imageCarousel.addEventListener('mousedown', (e) => {
-                  startX = e.pageX - imageCarousel.offsetLeft;
-                  isDragging = true;
-              });
-
-              imageCarousel.addEventListener('mousemove', (e) => {
-                  if (!isDragging) return;
-                  e.preventDefault();
-                  const x = e.pageX - imageCarousel.offsetLeft;
-                  const walk = (x - startX) * 2;
-                  imageCarousel.style.transform = `translateX(${-currentIndex * cardWidth + walk}px)`;
-              });
-
-              imageCarousel.addEventListener('mouseup', finishDragging);
-              imageCarousel.addEventListener('mouseleave', finishDragging);
-
-              function finishDragging(e) {
-                  if (!isDragging) return;
-                  isDragging = false;
-                  const x = e.pageX - imageCarousel.offsetLeft;
-                  const walk = (x - startX) * 2;
-                  if (Math.abs(walk) > cardWidth / 2) {
-                      if (walk > 0) {
-                          currentIndex--;
-                      } else {
-                          currentIndex++;
-                      }
-                  }
-                  imageCarousel.style.transition = 'transform 0.5s ease';
-                  imageCarousel.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
-                  updateBackground(currentIndex);
-              }
-
-              imageCarousel.addEventListener('click', (event) => {
-                  const clickedCard = event.target.closest('.card');
-                  if (clickedCard) {
-                      const index = Array.from(imageCarousel.children).indexOf(clickedCard) % services.length;
-                      currentIndex = index;
-                      imageCarousel.style.transition = 'transform 0.5s ease';
-                      imageCarousel.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
-                      updateBackground(currentIndex);
-                  }
-              });
-
-              window.addEventListener('resize', () => {
-                  imageCarousel.innerHTML = '';
-                  populateCarousel();
-                  currentIndex = 0;
-                  imageCarousel.style.transform = `translateX(0)`;
-                  updateBackground(currentIndex);
-              });
-          }
-      }
-
-      document.addEventListener('DOMContentLoaded', initCarousel);
-  </script>
+   
 
 
 
