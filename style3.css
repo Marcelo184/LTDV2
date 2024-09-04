@@ -142,13 +142,17 @@ body, html {
     flex-direction: column;
     max-width: 30%;
     padding: 3rem;
-    background: rgba(255, 255, 15, 0.866);
+    background-image: url(picture/fondo2.png);
     border-radius: 10px;
     margin-left: 15%;
     position: relative;
     z-index: 2;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.5s ease;
+}
+
+#text-tarjeta1 {
+    color: #ffffff;
 }
 
 .hero-content img {
@@ -268,7 +272,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: radial-gradient(circle at 50% -3.03%, #f3ff51 0, #f9e746 50%, #fff700 100%);
+    background-image: radial-gradient(circle at 50% -3.03%, #efff12 0, #ffe60a 50%, #fff700 100%);
 }
 
 
@@ -294,6 +298,10 @@ h1 {
 #quienessomos {
     margin-top: 7%;
     font-family: Poppins;
+}
+
+#tituoloclientessatisfechos {
+    color: #000;
 }
 
 h2 {
@@ -562,6 +570,35 @@ h2 {
     font-size: 24px;
     animation: bounce 2s infinite;
 }
+
+@media (max-width: 768px) {
+    .carousel-container {
+        position: relative;
+        overflow:auto;
+        background: rgba(255, 229, 29, 0.3);
+        padding: 20px 0;
+    }
+    .carousel {
+        display: flex;
+        transition: transform 0.2s ease;
+    }
+    .card {
+        flex: 0 0 auto;
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    }
+
+}
+
+
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0) translateX(-50%);
@@ -991,7 +1028,7 @@ footer {
 }
 
 #tituoloclientessatisfechos{ 
-    color: black;
+    color: #000;
 }
 
 #quienes-title {
